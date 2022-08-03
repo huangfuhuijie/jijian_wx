@@ -1,0 +1,35 @@
+<!--登录页面-->
+<view class="container">
+    <view class="image">
+        <image src="/assets/images/logo.jpg"/>
+    </view>
+    <van-divider/>
+    <view class="title">
+        申请获取以下权限
+    </view>
+    <view wx:if="{{!hasUserInfo}}" class="content">
+       您的身份信息将用于会员注册
+    </view>
+<!--    改为在个人中心手动填写-->
+<!--    <van-transition wx:else custom-class="block" name="slide-left" duration="500">-->
+<!--        <view class="content">-->
+<!--            获得你的手机号码-->
+<!--        </view>-->
+<!--    </van-transition>-->
+    <block wx:if="{{!hasUserInfo}}">
+        <!--这里为了兼容之前版本用了两种方法获取用户信息-->
+        <view class="user-info">
+            <button wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile" class="button">获取头像昵称</button>
+            <button wx:else open-type="getUserInfo" bindgetuserinfo="getUserInfo" class="button">获取头像昵称</button>
+        </view>
+    </block>
+<!--    <van-transition wx:else custom-class="block" name="slide-right" duration="500">-->
+<!--        <view class="user-info">-->
+<!--            <button open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber" class="button">获取手机号码</button>-->
+<!--        </view>-->
+<!--    </van-transition>-->
+    <view  class="cancel-button">
+        <button bindtap="goReturn" class="button">不登录直接进入</button>
+    </view>
+
+</view>

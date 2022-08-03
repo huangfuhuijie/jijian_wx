@@ -1,0 +1,11 @@
+.container {
+  text-align: center;
+}
+.container .title {
+  padding: 40rpx;
+}
+.container .card {
+  padding: 20rpx;
+  margin-bottom: 20rpx;
+  border-radius: 10rpx;
+}

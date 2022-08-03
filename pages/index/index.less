@@ -1,0 +1,127 @@
+page {
+  --blue: #21da6d;
+  --white-1: #adadad;
+  --white-2: #E5FFFFFF;
+  --black-1: #2a2929;
+  --black-2: #1c1c1c;
+
+  .container {
+    background-image: linear-gradient(var(--blue) 35%, var(--black-2) 45%);
+    .overlay-popup{
+      background: var(--white-1);
+    }
+
+
+
+    .scroll {
+      //height: 100%;
+      //padding-bottom: 60rpx;
+    }
+
+    .name {
+      display: flex;
+
+      image {
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+      }
+
+      .name-title {
+        line-height: 2rem;
+        padding-left: 20rpx;
+        font-size: 40rpx;
+        font-family: 幼圆;
+        font-weight: bold;
+      }
+    }
+
+    .card {
+      margin-bottom: 20rpx;
+      background-color: var(--black-1);
+      text-align: center;
+      color: var(--blue);
+      border-radius: 15rpx;
+      padding: 15rpx;
+
+      .item {
+        display: flex;
+
+        .item-content {
+          flex-grow: 1;
+
+          .text {
+            margin-top: 15rpx;
+            font-size: 30rpx;
+            margin-bottom: 15rpx;
+          }
+
+          .text2 {
+            margin-top: 15rpx;
+            font-size: 26rpx;
+            margin-bottom: 15rpx;
+            color: var(--white-1);
+          }
+        }
+
+      }
+    }
+
+    .swiper-box {
+      border-radius: 10rpx;
+      overflow: hidden;
+      transform: translateY(0);
+
+      .swiper {
+        width: 100%;
+        //height: 11rem;
+
+        .swiper-item {
+          .swiper-image {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+    }
+
+    .number-row {
+      padding: 20rpx 40rpx 0 40rpx;
+      display: flex;
+      justify-content: space-between;
+
+      .number-title {
+        color: var(--white-1);
+        text-align: left;
+        font-size: 26rpx;
+      }
+      .progress{
+        padding-top:15rpx ;
+        width: 300rpx;
+      }
+      .number {
+        color: var(--blue);
+      }
+    }
+
+    .address {
+      color: var(--white-2);
+      text-align: left;
+
+      .detail {
+        margin: 10rpx 0;
+        font-size: 22rpx;
+        color: var(--white-1);
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline
+      }
+
+      .icon {
+        text-align: right;
+        color: var(--blue);
+        letter-spacing: 20rpx;
+      }
+    }
+  }
+}

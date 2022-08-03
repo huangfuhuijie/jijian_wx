@@ -1,0 +1,10 @@
+{
+  "name": "jianshen-weapp2",
+  "version": "1.0.0",
+  "dependencies": {
+    "@vant/weapp": "^1.9.2"
+  },
+  "devDependencies": {
+    "miniprogram-api-typings": "^3.4.2"
+  }
+}

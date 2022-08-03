@@ -1,0 +1,17 @@
+<!--活动、课程页面-->
+<view class="container">
+    <scroll-view scroll-y="true" class="scroll">
+        <view class="card" wx:for="{{[1,2,3,4,5,6,7,8,9]}}">
+            <view class="image">
+                <image src="https://img.yzcdn.cn/vant/cat.jpeg"/>
+            </view>
+            <view class="content">
+                <view class="name">爵士舞</view>
+                <view class="message">安妮|19.20-20.00 操课</view>
+                <view class="target">减压、减脂</view>
+            </view>
+        </view>
+        <view class="seat">
+        </view>
+    </scroll-view>
+</view>

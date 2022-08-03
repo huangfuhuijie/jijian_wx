@@ -1,0 +1,100 @@
+.container {
+  --blue: #40f189;
+  --white-1: #adadad;
+  --white-2: #E5FFFFFF;
+  --black-1: #2a2929;
+  --black-2: #1c1c1c;
+  padding: 0;
+  .scroll{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+  }
+  .picture {
+    .main-image {
+      width: 100%;
+    }
+  }
+
+  .teacher {
+    padding: 20rpx;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #e3dfdf;
+    .left {
+      display: flex;
+
+      .icon {
+        .image {
+          width: 120rpx;
+          height: 120rpx;
+          border-radius: 50%;
+        }
+      }
+
+      .message {
+        padding: 20rpx 20rpx;
+
+        .title {
+          font-size: 32rpx;
+        }
+
+        .description {
+          display: flex;
+          font-size: 26rpx;
+          color: var(--white-1);
+
+          .time {
+          }
+
+          .name {
+            padding-left: 20rpx;
+          }
+        }
+      }
+    }
+
+    .right {
+      padding: 20rpx 20rpx;
+      .button {
+        font-size: 26rpx;
+        width: 6rem;
+        color: var(--white-2);
+        background: #e28014;
+      }
+      .black{
+        background: var(--white-1);
+      }
+    }
+  }
+  .content {
+    .card {
+      width: 100%;
+      padding: 20rpx;
+      border-bottom: 1px solid #e3dfdf;
+      display: flex;
+
+      .title {
+        color: var(--white-1);
+      }
+
+      .content {
+      }
+    }
+  }
+
+  .description {
+    .title {
+      padding: 20rpx;
+      color: var(--white-1);
+      background: #e3dfdf;
+      font-size: 24rpx;
+    }
+
+    .content {
+      padding: 20rpx;
+    }
+  }
+}

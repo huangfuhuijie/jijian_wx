@@ -1,0 +1,113 @@
+<!--首页页面-->
+<view class="container">
+    <!--门禁码弹出层-->
+<!--    <van-overlay show="{{ show }}" bind:click="onClose">-->
+<!--        <view class="popup" hidden="{{!show}}" bindtap="onClose" >-->
+<!--            <view class="popup-code">-->
+<!--                <canvas class="canvas-code" canvas-id="myQrcode"/>-->
+
+<!--            </view>-->
+<!--        </view>-->
+<!--    </van-overlay>-->
+<!--    <van-overlay show="{{ show }}" bind:click="onClickHide">-->
+<!--        <view class="wrapper">-->
+<!--            <view class="block" catch:tap="noop" />-->
+<!--        </view>-->
+<!--    </van-overlay>-->
+<!--    关注公众号-->
+<!--    <van-popup show="{{ isWechatPublic }}" bind:close="wechatPublicClose" closeable="true">-->
+<!--        <view class="popup">-->
+<!--            <image src="/assets/images/index/public-weacht.png" data-url="/assets/images/index/public-weacht.png" bindlongpress="saveImg"/>-->
+<!--            扫码关注公众号-->
+<!--        </view>-->
+<!--    </van-popup>-->
+    <view class="name">
+        <view class="name-icon">
+            <image src="/assets/images/logo.png"/>
+        </view>
+        <view class="name-title">
+            极健健身中心
+        </view>
+    </view>
+    <scroll-view scroll-y="true" class="scroll">
+        <view class="card">
+            <view class="item">
+                <view class="item-content" bindtap="scanCode">
+                    <van-icon name="scan" size="70rpx"/>
+                    <view class="text">扫一扫</view>
+                </view>
+                <view class="item-content" bindtap="goCard">
+                    <van-icon name="pending-payment" size="70rpx"/>
+                    <view class="text" bindtap="test">卡包</view>
+                </view>
+                <view class="item-content" bindtap="accessCode">
+                    <van-icon name="qr" size="70rpx"/>
+                    <view class="text">门禁码</view>
+                </view>
+            </view>
+            <view class="swiper-box">
+                <swiper class="swiper" indicator-dots="true" autoplay="true" indicator-active-color="#07E370"
+                        circular="true">
+                    <swiper-item class="swiper-item">
+                        <image class="swiper-image" mode="fil" src="/assets/images/index/banner-1.jpg"/>
+                    </swiper-item>
+                    <swiper-item class="swiper-item">
+                        <image class="swiper-image" mode="fil" src="/assets/images/index/banner-2.jpg"/>
+                    </swiper-item>
+                    <swiper-item class="swiper-item">
+                        <image class="swiper-image" mode="fils" src="/assets/images/index/banner-3.jpg"/>
+                    </swiper-item>
+                </swiper>
+            </view>
+            <view class="number-row">
+                <view class="number-title">
+                    健身房实时人数
+
+                </view>
+<!--                <view class="progress">-->
+<!--                    <van-progress show-pivot="false" color="#21da6d" percentage="50" stroke-width="1"/>-->
+<!--                </view>-->
+<!--                <view class="canvas">-->
+<!--                    <canvas type="2d" id="myCanvas" style="width: 120px;height:19px;"></canvas>-->
+<!--                </view>-->
+                <view class="number">
+                    {{number}}
+                </view>
+            </view>
+        </view>
+        <view class="card">
+            <view class="item">
+
+                <view class="item-content" bindtap="payCard">
+                    <van-icon name="card" size="50rpx"/>
+                    <view class="text2" bindtap="test">在线售卡</view>
+                </view>
+<!--                <view class="item-content" bindtap="openWechat">-->
+<!--                    <van-icon name="wechat" size="50rpx"/>-->
+<!--                    <view class="text2">官方微信号</view>-->
+<!--                </view>-->
+                <view class="item-content">
+                    <!--                    <van-icon name="qr" size="50rpx"/>-->
+                    <!--                    <view class="text2">门禁码</view>-->
+                </view>
+                <view class="item-content">
+                    <!--                    <van-icon name="qr" size="50rpx"/>-->
+                    <!--                    <view class="text2">门禁码</view>-->
+                </view>
+            </view>
+        </view>
+        <view class="card address">
+            <view class="title">
+                门店地址
+            </view>
+            <view class="detail">
+                <view>{{store.address}}</view>
+                <view class="icon">
+                    <van-icon bindtap="callPhone" name="phone" size="25rpx"/>
+                    <van-icon bindtap="openLocation" name="location" size="25rpx"/>
+                </view>
+            </view>
+        </view>
+    </scroll-view>
+    <!--    <my-tab-bar active="0"></my-tab-bar>-->
+</view>

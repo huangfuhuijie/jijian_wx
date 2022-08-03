@@ -1,0 +1,77 @@
+<view class="container">
+    <scroll-view scroll-y="true" class="scroll">
+        <view class="picture">
+            <image class="main-image" src="/assets/images/index/banner-2.jpg" mode="widthFix"/>
+        </view>
+        <view class="teacher">
+            <view class="left">
+                <view class="icon">
+                    <image src="/assets/images/person/person-default.png" class="image"></image>
+                </view>
+                <view class="message">
+                    <view class="title">
+                        {{timetable.courseName}}
+                    </view>
+                    <view class="description">
+                        <view class="time">
+                            {{timetable.duration}}分钟
+                        </view>
+                        <view class="name">
+                            {{timetable.teacherName}}
+                        </view>
+                    </view>
+                </view>
+            </view>
+            <view class="right">
+                <block wx:if="{{timetable.appointmentType==1}}">
+                    <block wx:if="{{timetable.status==1}}">
+                        <button class="button" wx:if="{{appointmentStatus==0}}" bindtap="appointment">立即预约</button>
+                        <button class="button" wx:else bindtap="delAppointment">取消预约</button>
+                    </block>
+                    <button class="button black" wx:if="{{timetable.status==2}}">预约结束</button>
+                    <button class="button black" wx:if="{{timetable.status==3}}">已结束</button>
+
+
+                </block>
+                <button class="button black" wx:else>无需预约</button>
+            </view>
+        </view>
+        <view class="content">
+            <view class="card">
+                <view class="title">时间：</view>
+                <view class="content">{{timetable.startTime}}</view>
+            </view>
+            <view class="card">
+                <view class="title">地点：</view>
+                <view class="content">{{timetable.address}}</view>
+            </view>
+            <view class="card">
+                <view class="title">状态：</view>
+                <view class="content">
+                    <block wx:if="{{timetable.appointmentType==1}}">
+                        <block wx:if="{{timetable.status==1}}"> 可预约</block>
+                        <block wx:if="{{timetable.status==2}}"> 预约结束</block>
+                        <block wx:if="{{timetable.status==3}}"> 已结束</block>
+                    </block>
+                    <block wx:else>无需预约</block>
+                </view>
+            </view>
+            <!--            <view class="card">-->
+            <!--                <view class="title">预约：</view>-->
+            <!--                <view class="content">已预约0人，余8人</view>-->
+            <!--            </view>-->
+        </view>
+        <view class="description">
+            <view class="title">课程简介</view>
+            <view class="content">
+                {{timetable.description}}
+            </view>
+        </view>
+        <view class="description">
+            <view class="title">课程详情</view>
+            <view class="content">
+                {{timetable.detail}}
+            </view>
+        </view>
+    </scroll-view>
+</view>

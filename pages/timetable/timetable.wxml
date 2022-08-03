@@ -1,0 +1,70 @@
+<!--课程表页面-->
+<view class="container">
+    <van-calendar show="{{ show }}" bind:close="onClose" bind:confirm="onConfirm" color="#21da6d"/>
+    <view class="header">
+        <view class="time {{week=='周一'?'active':''}}" data-date="{{dates[0]}}" bindtap="weekClick">
+            <view class="week">周一</view>
+            <view class="date">{{dates[0].date}}</view>
+        </view>
+        <view class="time {{week=='周二'?'active':''}}" data-date="{{dates[1]}}" bindtap="weekClick">
+            <view class="week">周二</view>
+            <view class="date">{{dates[1].date}}</view>
+        </view>
+        <view class="time {{week=='周三'?'active':''}}" data-date="{{dates[2]}}" bindtap="weekClick">
+            <view class="week">周三</view>
+            <view class="date">{{dates[2].date}}</view>
+        </view>
+        <view class="time {{week=='周四'?'active':''}}" data-date="{{dates[3]}}" bindtap="weekClick">
+            <view class="week">周四</view>
+            <view class="date">{{dates[3].date}}</view>
+        </view>
+        <view class="time {{week=='周五'?'active':''}}" data-date="{{dates[4]}}" bindtap="weekClick">
+            <view class="week">周五</view>
+            <view class="date">{{dates[4].date}}</view>
+        </view>
+        <view class="time {{week=='周六'?'active':''}}" data-date="{{dates[5]}}" bindtap="weekClick">
+            <view class="week">周六</view>
+            <view class="date">{{dates[5].date}}</view>
+        </view>
+        <view class="time {{week=='周日'?'active':''}}" data-date="{{dates[6]}}" bindtap="weekClick">
+            <view class="week">周日</view>
+            <view class="date">{{dates[6].date}}</view>
+        </view>
+        <view class="calendar">
+            <van-icon name="calendar-o" bind:click="onDisplay" size="70rpx"/>
+        </view>
+    </view>
+    <view class="card-list">
+        <view class="card" wx:for="{{timetables}}" wx:key="index" data-item="{{item}}" bindtap="goDetail">
+            <view class="left">
+                <view class="status" wx:if="{{item.appointmentType==0}}" style="background:#e87d04">无需预约</view>
+                <block wx:else>
+                    <view class="status" wx:if="{{item.status==1}}" style="background:#40f189">可预约</view>
+                    <view class="status" wx:if="{{item.status==2}}" style="background:#adadad">预约结束</view>
+                    <view class="status" wx:if="{{item.status==3}}" style="background:#adadad">已结束</view>
+                </block>
+
+                <view class="image">
+                    <image src="/assets/images/person/person-default.png"/>
+                </view>
+                <view class="content">
+                    <view class="name">{{item.courseName}}</view>
+                    <view class="message">
+                        <view class="teacher-name">{{item.teacherName}}</view>
+                        <view class="start-time">{{item.startTime}}</view>
+                    </view>
+                    <view class="target">{{item.duration}}分钟</view>
+                </view>
+            </view>
+            <view class="right" wx:if="{{item.appointmentType==1}}">
+                <block wx:if="{{item.appointmentStatus==0}}">
+                <button class="button" wx:if="{{item.status==1}}">预 约</button>
+                <button class="button black" wx:else>预 约</button>
+                </block>
+                <block wx:if="{{item.appointmentStatus==1}}">
+                    <button class="button blue">已预约</button>
+                </block>
+            </view>
+        </view>
+    </view>
+</view>

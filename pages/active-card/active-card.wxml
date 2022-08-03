@@ -1,0 +1,40 @@
+<!--购买卡包页面-->
+<view class="container">
+    <scroll-view scroll-y="true" class="scroll">
+        <block wx:for="{{cardList}}" wx:key="index">
+            <view class="card" bindtap="showPopup" data-card="{{item}}">
+                <view>{{item.cardName}}</view>
+                <view>{{item.duration}}
+                    <text wx:if="{{item.duration!='永久'}}">天</text>
+                </view>
+            </view>
+        </block>
+    </scroll-view>
+    <van-popup
+            round
+            custom-class="popup"
+            show="{{ show }}"
+            position="bottom"
+            custom-style="height: 40%;"
+            bind:close="onClose"
+    >
+        <view class="card">
+            <view>{{selectCard.cardName}}</view>
+            <!--不是数字不显示单位天-->
+            <view>{{selectCard.duration}}
+                <text wx:if="{{selectCard.duration!='永久'}}">天</text>
+            </view>
+        </view>
+        <view class="input">
+            <input class="my-input" placeholder-style="color:#F76260"  placeholder="请输入邀请码" model:value="{{inviteCode}}"/>
+        </view>
+        <view class="button">
+            <view class="item">
+                <van-button type="default" size="large" custom-class="cancel" bindtap="onClose">取消</van-button>
+            </view>
+            <view class="item">
+                <van-button type="default" size="large" custom-class="payment" bindtap="payment">立即支付</van-button>
+            </view>
+        </view>
+    </van-popup>
+</view>

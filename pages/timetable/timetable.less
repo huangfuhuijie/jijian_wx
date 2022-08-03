@@ -1,0 +1,139 @@
+.container {
+  --blue: #40f189;
+  --white-1: #adadad;
+  --white-2: #E5FFFFFF;
+  --black-1: #2a2929;
+  --black-2: #1c1c1c;
+  padding: 0;
+  background-color: var(--black-2);
+  color: var(--white-1);
+
+  .header {
+    background: var(--black-1);
+    display: flex;
+    align-content: space-around;
+    font-size: 30rpx;
+
+    .time {
+      padding: 10rpx;
+      line-height: 50rpx;
+      text-align: center;
+      flex-shrink: 1;
+      width: 12%;
+
+      .week {
+
+      }
+
+      .date {
+
+      }
+    }
+
+    .active {
+      color: var(--blue);
+      border-bottom: 1px solid var(--blue);
+      padding-bottom: 10rpx;
+    }
+
+    .calendar {
+      width: 16%;
+      text-align: center;
+      padding-top: 15rpx;
+      padding-left: 10rpx;
+      flex-shrink: 1;
+      color: var(--blue);
+    }
+  }
+
+  .card-list {
+    margin-top: 20rpx;
+    padding: 20rpx;
+
+    .card {
+      margin-bottom: 20rpx;
+      background: var(--black-1);
+      display: flex;
+      justify-content: space-between;
+
+      .left {
+        display: flex;
+
+        .status {
+          font-weight: bold;
+          background: #e87d04;
+          width: 40rpx;
+          text-align: center;
+          font-size: 26rpx;
+          color: var(--black-2);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .image {
+          text-align: center;
+          margin: 20rpx;
+
+          image {
+            width: 4rem;
+            height: 4rem;
+            border-radius: 50%;
+          }
+        }
+
+        .content {
+          padding: 20rpx 0;
+
+          .name {
+            color: var(--white-2);
+            font-weight: bold;
+            font-size: 30rpx;
+          }
+
+          .message {
+            font-size: 26rpx;
+            display: flex;
+            margin: 10rpx 0;
+            .teacher-name {
+              padding-right: 20rpx;
+              border-right: 1px solid var(--white-1);
+            }
+            .start-time {
+              padding-left: 20rpx;
+            }
+          }
+
+          .target {
+            padding: 5rpx 0;
+            color: #e2b37e;
+            font-size: 26rpx;
+          }
+        }
+      }
+
+      .right {
+        padding-top: 50rpx;
+        padding-right: 40rpx;
+
+        .button {
+          font-size: 24rpx;
+          width: 140rpx;
+          height: 60rpx;
+          border: 1px solid var(--blue);
+          background: var(--black-1);
+          color: var(--blue);
+        }
+        .black{
+          color: var(--white-1);
+          border: 1px solid var(--white-1);
+        }
+        .blue{
+          color: #e2b37e;
+          border: 1px solid #e2b37e;
+        }
+      }
+    }
+  }
+
+}

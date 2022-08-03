@@ -1,0 +1,29 @@
+.container {
+  padding: 100rpx 40rpx 40rpx 40rpx;
+}
+.container .image {
+  text-align: center;
+}
+.container .image image {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+}
+.container .title {
+  padding: 20rpx;
+  font-size: 40rpx;
+  font-weight: bold;
+}
+.container .content {
+  margin: 40rpx 0;
+  padding: 20rpx;
+  font-size: 30rpx;
+  color: #adadad;
+}
+.container .user-info .button {
+  color: #dbdada;
+  background-image: linear-gradient(to right, #4df390 0%, #08f166 100%);
+}
+.container .cancel-button {
+  margin-top: 20rpx;
+}

@@ -1,0 +1,44 @@
+.container{
+  --blue: #21da6d;
+  --white-1: #adadad;
+  --white-2: #E5FFFFFF;
+  --black-1: #2a2a29;
+  --black-2: #1c1c1c;
+  background-color: var(--black-2);
+  color: var(--white-1);
+  .scroll{
+    height: 100%;
+  }
+  .card{
+    margin-bottom: 20rpx;
+    background: var(--black-1);
+    display: flex;
+    .image {
+      text-align: center;
+      margin: 20rpx;
+      image{
+        width: 4rem;
+        height: 4rem;
+        border-radius: 50%;
+      }
+    }
+    .content{
+      padding: 20rpx 0;
+      .name{
+        padding: 0 0 5rpx 0;
+        color: var(--white-2);
+        font-weight: bold;
+        font-size: 30rpx;
+      }
+      .message{
+        padding: 5rpx 0;
+        font-size: 26rpx;
+      }
+      .target{
+        padding: 5rpx 0;
+        color: #e2b37e;
+        font-size: 26rpx;
+      }
+    }
+  }
+}

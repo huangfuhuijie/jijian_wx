@@ -1,0 +1,68 @@
+<!--个人中心页面-->
+<view class="container">
+    <view class="header-back">
+        <view class="header">
+            <view class="basic-message">
+                <block  wx:if="{{isLogin}}">
+                    <image src="{{avatar}}"  class="image" ></image>
+                    <view class="name">{{userName}}</view>
+                    <view class="name">{{userId}}</view>
+                </block>
+                <block wx:else>
+                    <image src="/assets/images/person/person-default.png"  class="image" ></image>
+                    <view class="name login" bindtap="goLogin">
+                        登录/注册
+                    </view>
+                </block>
+
+<!--                <view class="tel">{{userPhone}}</view>-->
+            </view>
+<!--            <view class="vip">-->
+<!--                您还不是会员-->
+<!--            </view>-->
+        </view>
+    </view>
+    <view class="main-message">
+        <view class="min-card" bindtap="goCard">
+            <view class="number">{{cardTotal}}</view>
+            <view class="text">我的卡包</view>
+        </view>
+        <view class="min-card">
+            <view class="number" bindtap="goAppointment">0</view>
+            <view class="text">我的预约</view>
+        </view>
+    </view>
+    <view class="card" bindtap="scanCode">
+        <view class="front">
+            扫一扫
+        </view>
+        <view class="later">
+            <van-icon name="arrow" />
+        </view>
+    </view>
+    <view class="card2">
+    </view>
+    <!-- <view class="card" bindtap="goPersonInfo">
+        <view class="front">
+            提交办卡申请
+        </view>
+        <view class="later">
+            <van-icon name="arrow" />
+        </view>
+    </view> -->
+    <view class="card2">
+    </view>
+    <view class="card" bindtap="goAccessRecord">
+        <view class="front">
+            出入记录
+        </view>
+        <view class="later">
+            <van-icon name="arrow" />
+        </view>
+    </view>
+    <view class="card2">
+    </view>
+<!--    <view class="card">-->
+<!--            <text>退出登录</text>-->
+<!--    </view>-->
+</view>

@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "van-divider": "@vant/weapp/divider/index",
+    "van-transition": "@vant/weapp/transition/index"
+  },
+  "navigationBarTitleText": "授权信息"
+}

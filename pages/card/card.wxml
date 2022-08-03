@@ -1,0 +1,26 @@
+<!--卡包页面-->
+<view class="container">
+    <!--    <view class="button">-->
+    <!--        <button type="primary" custom-class="button" bindtap="goRenew"> 我要开卡</button>-->
+    <!--    </view>-->
+    <scroll-view scroll-y="true" class="scroll">
+        <view class="title" wx:if="{{myCardList.length!==0}}">会员卡</view>
+        <block wx:for="{{myCardList}}" wx:key="index">
+            <view class="card" bindtap="goRenew" data-card="{{item}}">
+                <view>{{item.card.cardName}}</view>
+                <view>{{item.remainingTime}}
+                    <!--                    <text wx:if="{{item.duration!='永久'}}">天</text>-->
+                </view>
+            </view>
+        </block>
+        <view class="seat"></view>
+    </scroll-view>
+    <view wx:if="{{myCardList.length===0}}" class="empty">
+        <view>
+            <van-icon name="idcard" size="80"/>
+        </view>
+        <view>
+            当前卡包为空
+        </view>
+    </view>
+</view>

@@ -1,0 +1,76 @@
+.container {
+  --blue: #40f189;
+  --white-1: #adadad;
+  --white-2: #E5FFFFFF;
+  --black-1: #2a2929;
+  --black-2: #1c1c1c;
+  padding: 0;
+}
+.container .scroll {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+.container .picture .main-image {
+  width: 100%;
+}
+.container .teacher {
+  padding: 20rpx;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #e3dfdf;
+}
+.container .teacher .left {
+  display: flex;
+}
+.container .teacher .left .icon .image {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+}
+.container .teacher .left .message {
+  padding: 20rpx 20rpx;
+}
+.container .teacher .left .message .title {
+  font-size: 32rpx;
+}
+.container .teacher .left .message .description {
+  display: flex;
+  font-size: 26rpx;
+  color: var(--white-1);
+}
+.container .teacher .left .message .description .name {
+  padding-left: 20rpx;
+}
+.container .teacher .right {
+  padding: 20rpx 20rpx;
+}
+.container .teacher .right .button {
+  font-size: 26rpx;
+  width: 6rem;
+  color: var(--white-2);
+  background: #e28014;
+}
+.container .teacher .right .black {
+  background: var(--white-1);
+}
+.container .content .card {
+  width: 100%;
+  padding: 20rpx;
+  border-bottom: 1px solid #e3dfdf;
+  display: flex;
+}
+.container .content .card .title {
+  color: var(--white-1);
+}
+.container .description .title {
+  padding: 20rpx;
+  color: var(--white-1);
+  background: #e3dfdf;
+  font-size: 24rpx;
+}
+.container .description .content {
+  padding: 20rpx;
+}

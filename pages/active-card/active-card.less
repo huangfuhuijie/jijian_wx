@@ -1,0 +1,66 @@
+.container {
+  --blue: #21da6d;
+  --white-1: #adadad;
+  --white-2: #E5FFFFFF;
+  --black-1: #2a2929;
+  --black-2: #1c1c1c;
+  background-color: var(--black-2);
+  color: var(--white-1);
+
+  .scroll {
+    height: 100%;
+  }
+
+  .card {
+    height: 6rem;
+    background: #4ed2b3;
+    color: var(--white-2);
+    margin: 20rpx 30rpx;
+    padding: 20rpx;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 20rpx;
+  }
+
+  .popup {
+    background: var(--white-1);
+
+    .card {
+      margin: 0;
+    }
+    .input{
+      height: 80rpx;
+      width: 100%;
+      padding: 20rpx;
+      font-size: 26rpx;
+      .my-input{
+        padding: 10rpx;
+        color: var(--white-1);
+        width: 80%;
+      }
+    }
+    .button {
+      position: fixed;
+      bottom: 0;
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      .item {
+        padding: 10rpx;
+        flex: 1 1 50%;
+        .cancel {
+          border-radius: 10rpx;
+          color: var(--black-1);
+        }
+
+        .payment {
+          color: var(--white-2);
+          background: var(--black-1);
+          border-radius: 10rpx;
+          border: 0;
+        }
+      }
+    }
+  }
+
+}

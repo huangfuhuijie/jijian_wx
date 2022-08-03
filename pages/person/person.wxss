@@ -1,0 +1,72 @@
+.container {
+  --blue: #21da6d;
+  --white-1: #adadad;
+  --white-2: #E5FFFFFF;
+  --black-1: #2a2929;
+  --black-2: #1c1c1c;
+  padding: 0;
+  background-image: linear-gradient(var(--blue) 30%, var(--black-2) 40%);
+  color: var(--white-1);
+}
+.container .header-back {
+  padding: 40rpx;
+}
+.container .header-back .header {
+  display: flex;
+  justify-content: left;
+  color: var(--black-2);
+  padding: 30rpx;
+}
+.container .header-back .header .image {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+}
+.container .header-back .header .basic-message {
+  display: flex;
+}
+.container .header-back .header .basic-message .name {
+  height: 40rpx;
+  margin-top: 40rpx;
+  margin-left: 20rpx;
+  font-size: 26rpx;
+  border: 1px solid var(--white-2);
+  border-radius: 30rpx;
+  padding: 10rpx 30rpx;
+  color: var(--white-2);
+}
+.container .header-back .header .basic-message .tel {
+  font-size: 26rpx;
+}
+.container .header-back .vip {
+  line-height: 60rpx;
+}
+.container .main-message {
+  background-color: var(--black-1);
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: 0 20rpx;
+}
+.container .main-message .min-card {
+  margin: 50rpx;
+}
+.container .main-message .min-card .number {
+  font-size: 60rpx;
+  color: var(--blue);
+}
+.container .main-message .min-card .text {
+  color: var(--white-1);
+  font-size: 26rpx;
+}
+.container .card {
+  display: flex;
+  justify-content: space-between;
+  color: var(--white-1);
+  padding: 20rpx;
+  background-color: var(--black-2);
+}
+.container .card2 {
+  background: var(--black-1);
+  height: 20rpx;
+}

@@ -1,0 +1,16 @@
+page {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Segoe UI, Arial, Roboto, 'PingFang SC', 'miui', 'Hiragino Sans GB', 'Microsoft Yahei', sans-serif;
+}
+.container {
+  height: 100%;
+  width: 100%;
+  justify-content: space-between;
+  padding-left: 20rpx;
+  padding-right: 20rpx;
+  box-sizing: border-box;
+  position: fixed;
+}
+.container .seat {
+  height: 100rpx;
+  width: 100%;
+}

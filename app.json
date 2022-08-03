@@ -1,0 +1,55 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/login/login",
+    "pages/course/course",
+    "pages/timetable/timetable",
+    "pages/person/person",
+    "pages/card/card",
+    "pages/active-card/active-card",
+    "pages/person-info/person-info",
+    "pages/door-code/door-code",
+    "pages/access-record/access-record",
+    "pages/record-detail/record-detail",
+    "pages/course-detail/course-detail"
+  ],
+  "tabBar": {
+    "custom": true,
+    "color": "#adadad",
+    "selectedColor": "#21da6d",
+    "borderStyle": "black",
+    "backgroundColor": "#151515",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "assets/images/index.png",
+        "selectedIconPath": "assets/images/index-active.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/timetable/timetable",
+        "iconPath": "assets/images/timetable.png",
+        "selectedIconPath": "assets/images/timetable-active.png",
+        "text": "课程"
+      },
+      {
+        "pagePath": "pages/person/person",
+        "iconPath": "assets/images/person.png",
+        "selectedIconPath": "assets/images/person-active.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "@navBackgroundColor",
+    "navigationBarTitleText": "",
+    "navigationBarTextStyle":"@navTextStyle",
+    "backgroundColor": "#21da6d"
+  },
+  "sitemapLocation": "sitemap.json",
+  "usingComponents": {
+  },
+  "darkmode": true,
+  "themeLocation": "theme.json"
+}

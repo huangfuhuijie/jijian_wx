@@ -1,0 +1,11 @@
+<!-- 门禁码页面-->
+<view class="popup-code">
+    <view class="replay" bindtap="getUserCode">
+        <van-icon name="replay"/>
+    </view>
+    <canvas class="canvas-code" canvas-id="myQrcode"/>
+</view>
+<view class="text">
+    请将此二维码置于闸机扫码口
+
+</view>

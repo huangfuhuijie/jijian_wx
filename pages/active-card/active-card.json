@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "van-popup": "@vant/weapp/popup/index",
+    "van-button": "@vant/weapp/button/index",
+    "van-transition": "@vant/weapp/transition/index"
+  },
+  "navigationBarBackgroundColor": "#1c1c1c",
+  "navigationBarTitleText": "开卡"
+}
